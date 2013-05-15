@@ -18,9 +18,9 @@ The worker threads can do this:
 ```
 #!python
 
-    import threadsafepub as tpub
+from threadsafepub import pub as tpub
 
-    tpub.sendMessage("someTopic", somedata="Some Data")
+tpub.sendMessage("someTopic", somedata="Some Data")
 ```
 
 
@@ -29,18 +29,18 @@ The main thread can do this:
 ```
 #!python
 
-import threadsafepub as tpub
+from threadsafepub import pub as tpub
 ```
 
 and in its idle callback:
 ```
 #!python
 
-    mainThread_IdleCallback():
-        tpub.poll()
+mainThread_IdleCallback():
+    tpub.poll()
 ```
 
 Note:
-The listeners just subscribe to pub.subscribe as usually! This module doesn't provide a
+The listeners just subscribe to pub.subscribe as usual! This module doesn't provide a
 thread-safe subscription method. It just calls pub.sendMessage for all queued messages when
 poll() is called.

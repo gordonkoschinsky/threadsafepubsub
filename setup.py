@@ -10,7 +10,7 @@ setup(
     url='http://pypi.python.org/pypi/threadsafepub/',
     license='LICENSE.txt',
     description='Simple wrapper to PyPubSub.pub threadsafe.',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     install_requires=[
         "PyPubSub"
     ],
