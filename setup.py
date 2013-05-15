@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='ThreadSafePub',
-    version='0.1.0',
+    version='0.1.1',
     author='Frank Klein',
     author_email='nospam4gordon@gmail.com',
     packages=['threadsafepub'],
